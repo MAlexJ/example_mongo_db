@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: one_to_many
+
+  config:
+    import: optional:file:.env[.properties]
+
+  threads:
+    virtual:
+      enabled: true
+
+  data:
+    mongodb:
+      uri: ${APP_SERVICE_MONGODB_URI:uri}
+      database: ${APP_SERVICE_MONGODB_DATABASE:example-mongo-db}
+
+
+logging:
+  level:
+    root: ${APP_SERVICE_ROOT_LOG_LEVEL:INFO}
+    org.springframework: ${APP_SERVICE_SPRING_LOG_LEVEL:INFO}
+    # MongoDb: query
+    org.springframework.data.mongodb.core.MongoTemplate: ${APP_SERVICE_MONGO_TEMPLATE_LOG_LEVEL:DEBUG}
+    # MongoDb: N+1 queries for referenced collections
+    org.springframework.data.mongodb.core.convert.MongoDatabaseFactoryReferenceLoader: ${APP_SERVICE_MONGO_REF_LOADER_LOG_LEVEL:TRACE}

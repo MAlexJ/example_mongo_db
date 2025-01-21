@@ -1,0 +1,11 @@
+plugins {
+    // Apply the foojay-resolver plugin to allow automatic download of JDKs
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '0.8.0'
+}
+
+rootProject.name = 'example_mongo_db'
+
+include 'relationships',
+        'relationships:one_to_many',
+        'tests',
+        'tests:unit_tests'
