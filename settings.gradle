@@ -6,6 +6,6 @@ plugins {
 rootProject.name = 'example_mongo_db'
 
 include 'relationships',
-        'relationships:one_to_many',
+        'relationships:many_to_one',
         'tests',
         'tests:unit_tests'

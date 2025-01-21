@@ -1,0 +1,34 @@
+###
+GET http://localhost:8080/api/users
+
+###
+POST http://localhost:8080/api/users
+Content-Type: application/json
+
+{
+  "userId": 4,
+  "role": {
+    "id": "67902beddde4d80014308ec5"
+  }
+}
+
+
+### Create ADMIN role
+POST http://localhost:8080/api/roles
+Content-Type: application/json
+
+{
+  "name": "ADMIN"
+}
+
+### Create USER role
+POST http://localhost:8080/api/roles
+Content-Type: application/json
+
+{
+  "name": "USER"
+}
+
+
+### Find all roles
+GET http://localhost:8080/api/roles
