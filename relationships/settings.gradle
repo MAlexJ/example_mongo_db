@@ -1,3 +1,4 @@
 rootProject.name = 'relationships'
 
-include 'many_to_one'
+include 'one_to_many_unidirectional_relationship',
+        'one_to_many_bidirectional_relationship'
